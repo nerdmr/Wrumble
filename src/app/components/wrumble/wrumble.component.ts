@@ -264,6 +264,13 @@ export class WrumbleComponent implements OnInit {
     @HostListener('window:keydown', ['$event'])
     private keydown(event: KeyboardEvent) {
 
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            this.width = (this.width === 4) ? 5 : 4;
+            this.setupGame();
+            return;
+        }
+
         this.shiftDown = event.getModifierState('Shift');
         
         if (this.shiftDown && !this.altDown && event.getModifierState('Alt')) {
