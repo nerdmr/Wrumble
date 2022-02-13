@@ -1,0 +1,33 @@
+{
+  "name": "Wrumble",
+  "short_name": "Wrumble",
+  "theme_color": "#1C77C3",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "https://www.pastadrawer.com/",
+  "start_url": "https://www.pastadrawer.com/",
+  "orientation": "portrait",
+  "intent_filters": {
+    "scope_url_scheme": "https",
+    "scope_url_host": "www.pastadrawer.com",
+    "scope_url_path": "/"
+  },
+  "icons": [
+    {
+      "src": "assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "bound_webapk": {
+    "runtime_host": "org.chromium.chrome",
+    "runtime_host_application_name": "Chromium"
+  }
+}

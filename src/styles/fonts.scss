@@ -1,0 +1,44 @@
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v83/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+// @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400&family=Roboto+Mono:wght@300;400&family=Rock+3D&family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:ital,wght@0,500;0,600;1,500;1,600&family=Overpass+Mono:wght@300;400&family=Questrial&family=Rock+3D&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// Be Vietnam Pro   :ital,wght@0,400;0,500;0,600;1,300;1,400;1,500
+// Montserrat       :ital,wght@0,500;0,600;1,500;1,600
+// Overpass+Mono    :wght@300;400
+// Questrial
+// Rock+3D
+// Space+Mono       :ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+$font-site-heading: 'Rock 3D', sans-serif;
+$font-headings: 'Questrial', sans-serif;
+$font-content: 'Be Vietnam Pro', sans-serif;
+$font-mono: 'Overpass Mono', monospace;
+
+@mixin font-heading {    
+    font-family: $font-headings;
+    font-weight: 600;
+}

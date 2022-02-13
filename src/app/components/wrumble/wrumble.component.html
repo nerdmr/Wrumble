@@ -1,0 +1,32 @@
+
+<div class="wrumble max-h-screen min-h-screen m-auto p-4 aspect-square">
+    <!-- <div class="wrumble__info">
+        <div class="wrumble__score">
+            <div class="wrumble__score-title uppercase font-bold">Score</div>
+            <div class="wrumble__score-value">{{score}}</div>
+        </div>
+        <div class="wrumble__time">
+            
+        </div>
+    </div> -->
+    <div class="wrumble__grid grid gap-4 aspect-square" [ngClass]="{
+            'grid-cols-5': this.width == 5,
+            'grid-cols-4': this.width == 4
+    }" #grid>        
+        <div
+            class="wrumble__cell text-center aspect-square uppercase"
+            *ngFor="let item of cells; let i = index;"
+            tabindex="0"
+            #cell
+            [attr.data-char]="this.words[this.columnTransforms[i%this.width][Math.floor(i / this.width)] - 1][i%this.width]"
+            [ngClass]="{ 'hold': shiftDown, 'show': playing }"
+        >
+            <!-- {{this.words[Math.floor(i / this.width)][i%this.width]}} -->
+            <div class="wrumble__cell-inner h-full grid grid-rows-3">
+                <span class="wrumble__arrow wrumble__arrow--up text-sm flex justify-center items-center" octicon="chevron-up" (click)="up(i%this.width, Math.floor(i / this.width))"></span>
+                <span class="text-4xl flex justify-center items-center">{{this.words[this.columnTransforms[i%this.width][Math.floor(i / this.width)] - 1][i%this.width]}}</span>
+                <span class="wrumble__arrow wrumble__arrow--down text-sm flex justify-center items-center" octicon="chevron-down" (click)="down(i%this.width, Math.floor(i / this.width))"></span>
+            </div>
+        </div>
+    </div>
+</div>

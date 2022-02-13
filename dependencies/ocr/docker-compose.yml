@@ -1,0 +1,10 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  ocr:
+    build:
+      context: .
+      target: ocr-img
+    container_name: ocr
+    ports:
+      - "5000:5000"
+    hostname: ocr
