@@ -53,6 +53,10 @@ export class WrumbleComponent implements OnInit {
     private setupGame() {
         this.words = this.dictionaryService.getRandomWords(this.width);
         this.shuffleGame();
+
+        setTimeout(() => {
+            this.onCellMove();
+        }, 500);
     }
 
     private shuffleGame() {
@@ -96,6 +100,7 @@ export class WrumbleComponent implements OnInit {
         setTimeout(() => {
             this.startGame();
         }, 0);
+        
     }
 
     private onCellMove() {
